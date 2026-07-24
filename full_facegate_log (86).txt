@@ -1,0 +1,225 @@
+--------- beginning of main
+07-24 17:26:45.595  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:26:45.634  3958  4896 W ModuleManager: ModuleManager.loadModule():634 Module qtw is not available
+07-24 17:26:45.864  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:26:45.871  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:28:36.825  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:28:37.073  3958  4896 W ModuleManager: ModuleManager.loadModule():634 Module qtw is not available
+07-24 17:29:00.095 16044 16602 I ModuleManager: injectNow: PID=30920 verified has libcameraservice.so (4 mapping(s))
+07-24 17:29:00.521 16044 16602 I ModuleManager: injectNow: evicting lingering injector/watchdog before re-inject
+07-24 17:29:01.776 16044 16602 D ModuleManager: Watchdog stop requested
+07-24 17:29:04.534 16044 16602 I ModuleManager: injectNow: disabling SELinux for injection window
+07-24 17:29:07.852 30920 30920 I amkush/main: ────────────────────────────────────────
+07-24 17:29:07.852 30920 30920 I amkush/main: libhookProxy.so loaded  pid=30920
+07-24 17:29:07.852 30920 30920 I amkush/main: exe check: path='/system/bin/cameraserver' base='cameraserver' match=1 pid=30920
+07-24 17:29:07.854 30920 30920 I amkush/main: confirmed cameraserver process with libcameraservice.so — starting init thread
+07-24 17:29:07.888 30920 22611 I amkush/main: === amkush injection start  via=ptrace  pid=30920 ===
+07-24 17:29:07.888 30920 22611 I amkush/main: [1/4] crash_guard_init ...
+07-24 17:29:07.888 30920 22611 I amkush/main: [1/4] crash_guard_init OK
+07-24 17:29:07.888 30920 22611 I amkush/main: [2/4] frame_inject_init ...
+07-24 17:29:07.888 30920 22611 I amkush/frame_inject: frame_inject_init: loading libraries...
+07-24 17:29:07.892 30920 22611 I amkush/frame_inject: frame_inject_init: symbols resolved:
+07-24 17:29:07.892 30920 22611 I amkush/frame_inject:   lock=0x6f733648c0  lockPlanes=0x6f733649d0  unlock=0x6f73364ce0  describe=0x6f733646d0
+07-24 17:29:07.892 30920 22611 I amkush/frame_inject:   createFromHandle=0x7028875370  release=0x6f733646b0
+07-24 17:29:07.892 30920 22611 I amkush/frame_inject: frame_inject_init: OK (lockPlanes=YES createFromHandle=YES)
+07-24 17:29:07.892 30920 22611 I amkush/main: [2/4] frame_inject_init OK
+07-24 17:29:07.892 30920 22611 I amkush/main: [3/4] hook_proxy_install ...
+07-24 17:29:07.893 30920 22611 I amkush/hook_proxy: hook_proxy_install: resolving PCR+ROB variants (dynamic ELF scan primary)...
+07-24 17:29:07.893 30920 22611 I amkush/sym_resolver: resolve_all_pcr: starting full ELF scan (dynamic, no hardcoded names)
+07-24 17:29:07.893 30920 22611 I amkush/sym_resolver: ELF scan: checking '/system/bin/cameraserver' base=0x593e2d2000
+07-24 17:29:07.893 30920 22611 I amkush/sym_resolver: ELF scan: '/system/bin/cameraserver' → 0 match(es)
+07-24 17:29:07.893 30920 22611 I amkush/sym_resolver: ELF scan: checking '/system/lib64/libcameraservice.so' base=0x7013e30000
+07-24 17:29:07.916 30920 22611 I amkush/sym_resolver: ELF scan: FOUND[0] score=160 variant=3 addr=0x70140a0010 size=1396: android::HidlCamera3Device::processCaptureResult_3_4(android::hardware::hidl_vec<android::hardware::camera::device::V3_4::CaptureResult> const&)
+07-24 17:29:07.928 30920 22611 I amkush/sym_resolver: ELF scan: FOUND[1] score=155 variant=5 addr=0x70140acdc0 size=1380: android::AidlCamera3Device::processCaptureResult(std::__1::vector<aidl::android::hardware::camera::device::CaptureResult, std::__1::allocator<aidl::android::hardware::camera::device::CaptureResult> > const&)
+07-24 17:29:07.929 30920 22611 I amkush/sym_resolver: ELF scan: FOUND[2] score=20 variant=2 addr=0x70140fa23c size=4: android::camera3::processCaptureResult(android::camera3::CaptureOutputStates&, android::camera3::camera_capture_result const*)
+07-24 17:29:07.938 30920 22611 I amkush/sym_resolver: ELF scan: FOUND[3] score=155 variant=4 addr=0x70140a05a0 size=1496: android::HidlCamera3Device::processCaptureResult(android::hardware::hidl_vec<android::hardware::camera::device::V3_2::CaptureResult> const&)
+07-24 17:29:07.938 30920 22611 I amkush/sym_resolver: ELF scan: '/system/lib64/libcameraservice.so' → 4 match(es)
+07-24 17:29:07.939 30920 22611 I amkush/sym_resolver: resolve_all_pcr: processCaptureResult scan found 4 variant(s)
+07-24 17:29:07.952 30920 22611 I amkush/sym_resolver: ELF scan: '/system/bin/cameraserver' → 0 match(es)
+07-24 17:29:07.952 30920 22611 I amkush/sym_resolver: ELF scan: checking '/system/lib64/libcameraservice.so' base=0x7013e30000
+07-24 17:29:07.953 30920 22611 I amkush/sym_resolver: ELF scan: FOUND[0] score=50 variant=6 addr=0x70140fa230 size=4: android::camera3::returnOutputBuffers(bool, android::sp<android::NotificationListener>, android::camera3::camera_stream_buffer const*, unsigned long, long, long, bool, long, android::SessionStatsBuilder&, bool, std::__1::unordered_map<int, std::__1::vector<unsigned long, std::__1::allocator<unsigned long> >, std::__1::hash<int>, std::__1::equal_to<int>, std::__1::allocator<std::__1::pair<int const, std::__1::vector<unsigned long, std::__1::allocator<unsigned long> > > > > const&, android::hardware::camera2::impl::CaptureResultExtras const&, android::camera3::ERROR_BUF_STRATEGY, int)
+07-24 17:29:07.955 30920 22611 I amkush/sym_resolver: ELF scan: '/system/lib64/libcameraservice.so' → 1 match(es)
+07-24 17:29:07.973 30920 22611 I amkush/sym_resolver: resolve_all_pcr: returnOutputBuffers scan found 1 variant(s)
+07-24 17:29:07.973 30920 22611 I amkush/sym_resolver: resolve_all_pcr: known[0] variant=2 addr=0x70140fa23c already in list
+07-24 17:29:07.973 30920 22611 I amkush/sym_resolver: resolve_all_pcr: known[1] variant=3 addr=0x70140a0010 already in list
+07-24 17:29:07.973 30920 22611 I amkush/sym_resolver: resolve_all_pcr: known[2] variant=4 addr=0x70140a05a0 already in list
+07-24 17:29:07.973 30920 22611 I amkush/sym_resolver: resolve_all_pcr: known[3] variant=5 addr=0x70140acdc0 already in list
+07-24 17:29:08.025 30920 22611 I amkush/sym_resolver: resolve_all_pcr: TOTAL 5 variant(s) to hook:
+07-24 17:29:08.025 30920 22611 I amkush/sym_resolver:   [0] variant=3 source=elf_scan addr=0x70140a0010
+07-24 17:29:08.025 30920 22611 I amkush/sym_resolver:   [1] variant=5 source=elf_scan addr=0x70140acdc0
+07-24 17:29:08.025 30920 22611 I amkush/sym_resolver:   [2] variant=2 source=elf_scan addr=0x70140fa23c
+07-24 17:29:08.025 30920 22611 I amkush/sym_resolver:   [3] variant=4 source=elf_scan addr=0x70140a05a0
+07-24 17:29:08.025 30920 22611 I amkush/sym_resolver:   [4] variant=6 source=elf_scan addr=0x70140fa230
+07-24 17:29:08.026 30920 22611 I amkush/hook_proxy: PCR[0]: variant=3 addr=0x70140a0010 size=1396 source=elf_scan
+07-24 17:29:08.050 30920 22611 I amkush/hook_proxy: PCR slot[0] hooked OK: sym_idx=0 variant=3 stub=0xb4000070336cf420 fn=0x6f62e783ec
+07-24 17:29:08.050 30920 22611 I amkush/hook_proxy: PCR[1]: variant=5 addr=0x70140acdc0 size=1380 source=elf_scan
+07-24 17:29:08.051 30920 22611 I amkush/hook_proxy: PCR slot[1] hooked OK: sym_idx=1 variant=5 stub=0xb4000070336cf880 fn=0x6f62e78448
+07-24 17:29:08.051 30920 22611 I amkush/hook_proxy: PCR[2]: variant=2 addr=0x70140fa23c size=4 source=elf_scan
+07-24 17:29:08.051 30920 22611 I amkush/hook_proxy: PCR[2]: OutputUtils thunk B→0x17fe4889 at 0x70140fa23c: following to real impl 0x701408c460
+07-24 17:29:08.051 30920 22611 I amkush/hook_proxy: PCR slot[2] hooked OK: sym_idx=2 variant=2 stub=0xb4000070336cfa40 fn=0x6f62e784a4
+07-24 17:29:08.051 30920 22611 I amkush/hook_proxy: PCR[3]: variant=4 addr=0x70140a05a0 size=1496 source=elf_scan
+07-24 17:29:08.051 30920 22611 I amkush/hook_proxy: PCR slot[3] hooked OK: sym_idx=3 variant=4 stub=0xb4000070336cfb20 fn=0x6f62e78500
+07-24 17:29:08.051 30920 22611 I amkush/hook_proxy: PCR[4]: variant=6 addr=0x70140fa230 size=4 source=elf_scan
+07-24 17:29:08.051 30920 22611 I amkush/hook_proxy: PCR[4]: ROB thunk B→0x17fe4554 at 0x70140fa230: following to real impl 0x701408b780
+07-24 17:29:08.052 30920 22611 I amkush/hook_proxy: ROB slot[0] hooked OK: sym_idx=4 addr=0x70140fa230 stub=0xb4000070336cfc00
+07-24 17:29:08.052 30920 22611 I amkush/hook_proxy: PCR: 4 hook(s) installed  ROB: 1 hook(s) installed
+07-24 17:29:08.052 30920 22611 I amkush/hook_proxy: returnOutputBuffers hooked — HIDL/AIDL injection active.
+07-24 17:29:08.052 30920 22611 I amkush/hook_proxy: NOTE: Watch ROB fire counts in diagnostics — ROB fires = injection is running.
+07-24 17:29:08.052 30920 22611 I amkush/hook_proxy: hook_proxy_install: resolving CS variants (dynamic ELF scan)...
+07-24 17:29:08.052 30920 22611 I amkush/sym_resolver: resolve_all_cs: starting full ELF scan for configureStreams
+07-24 17:29:08.052 30920 22611 I amkush/sym_resolver: ELF scan: checking '/system/bin/cameraserver' base=0x593e2d2000
+07-24 17:29:08.052 30920 22611 I amkush/sym_resolver: ELF scan: '/system/bin/cameraserver' → 0 match(es)
+07-24 17:29:08.052 30920 22611 I amkush/sym_resolver: ELF scan: checking '/system/lib64/libcameraservice.so' base=0x7013e30000
+07-24 17:29:08.052 30920 22611 I amkush/sym_resolver: ELF scan: FOUND[0] score=150 variant=1 addr=0x7014037bf0 size=9024: android::Camera3Device::configureStreamsLocked(int, android::CameraMetadata const&, bool)
+07-24 17:29:08.055 30920 22611 I amkush/sym_resolver: ELF scan: FOUND[1] score=120 variant=1 addr=0x701402d8c0 size=428: android::Camera3Device::configureStreams(android::CameraMetadata const&, int)
+07-24 17:29:08.056 30920 22611 I amkush/sym_resolver: ELF scan: FOUND[2] score=230 variant=2 addr=0x7014096810 size=6372: android::HidlCamera3Device::HidlHalInterface::configureStreams(camera_metadata const*, android::camera3::camera_stream_configuration*, std::__1::vector<unsigned int, std::__1::allocator<unsigned int> > const&, long)
+07-24 17:29:08.056 30920 22611 I amkush/sym_resolver: ELF scan: FOUND[3] score=230 variant=3 addr=0x70140b2f20 size=3860: android::AidlCamera3Device::AidlHalInterface::configureStreams(camera_metadata const*, android::camera3::camera_stream_configuration*, std::__1::vector<unsigned int, std::__1::allocator<unsigned int> > const&, long)
+07-24 17:29:08.056 30920 22611 I amkush/sym_resolver: ELF scan: '/system/lib64/libcameraservice.so' → 4 match(es)
+07-24 17:29:08.057 30920 22611 I amkush/sym_resolver: resolve_all_cs: ELF scan found 4 variant(s)
+07-24 17:29:08.124 30920 22611 I amkush/sym_resolver: resolve_all_cs: total 4 configureStreams variant(s)
+07-24 17:29:08.124 30920 22611 I amkush/hook_proxy: CS[0]: variant=1 addr=0x7014037bf0 source=elf_scan
+07-24 17:29:08.124 30920 22611 I amkush/hook_proxy: CS[0]: SKIPPING variant=1 (Camera3Device — no camera3_stream_configuration_t*, hooking with HAL ABI crashes cameraserver)
+07-24 17:29:08.124 30920 22611 I amkush/hook_proxy: CS[1]: variant=1 addr=0x701402d8c0 source=elf_scan
+07-24 17:29:08.124 30920 22611 I amkush/hook_proxy: CS[1]: SKIPPING variant=1 (Camera3Device — no camera3_stream_configuration_t*, hooking with HAL ABI crashes cameraserver)
+07-24 17:29:08.124 30920 22611 I amkush/hook_proxy: CS[2]: variant=2 addr=0x7014096810 source=elf_scan
+07-24 17:29:08.124 30920 22611 I amkush/hook_proxy: CS[0] hooked OK: stub=0xb4000070336cfce0 variant=2
+07-24 17:29:08.124 30920 22611 I amkush/hook_proxy: CS[3]: variant=3 addr=0x70140b2f20 source=elf_scan
+07-24 17:29:08.127 30920 22611 I amkush/hook_proxy: CS[1] hooked OK: stub=0xb4000070336cfdc0 variant=3
+07-24 17:29:08.127 30920 22611 I amkush/hook_proxy: CS: 2/4 variant(s) hooked
+07-24 17:29:08.127 30920 22611 I amkush/hook_proxy: hook_proxy_install: resolving Camera3Stream::setUsage + Camera3OutputStream::getEndpointUsage (BUG-09 fix)...
+07-24 17:29:08.274 30920 22611 W amkush/sym_resolver: resolve_camera3_usage_hooks: dlsym missed at least one symbol — falling back to ELF substring scan
+07-24 17:29:08.278 30920 22611 I amkush/sym_resolver: resolve_camera3_usage_hooks: setUsage elf_scan hit: _ZN7android7camera313Camera3Stream8setUsageEm @ 0x701405dac0
+07-24 17:29:08.278 30920 22611 I amkush/sym_resolver: resolve_camera3_usage_hooks: getEndpointUsage elf_scan hit: _ZNK7android7camera319Camera3OutputStream26getEndpointUsageForSurfaceEPmRKNS_2spINS_7SurfaceEEE @ 0x7014070b60
+07-24 17:29:08.278 30920 22611 I amkush/sym_resolver: resolve_camera3_usage_hooks: BOTH found — setUsage=0x701405dac0(elf_scan) getEndpointUsage=0x7014070b60(elf_scan)
+07-24 17:29:08.311 30920 22611 I amkush/hook_proxy: Camera3Stream::setUsage hooked OK — addr=0x701405dac0 stub=0xb4000070336cfea0 sym=<elf_scan>
+07-24 17:29:08.315 30920 22611 I amkush/hook_proxy: Camera3OutputStream::getEndpointUsage hooked OK — addr=0x7014070b60 stub=0xb4000070336cff80 sym=<elf_scan>
+07-24 17:29:08.315 30920 22611 I amkush/hook_proxy: ═══════════════ HOOK INSTALL COMPLETE ═══════════════
+07-24 17:29:08.315 30920 22611 I amkush/hook_proxy:   PCR hooks: 4  (diagnostics-only for HIDL/AIDL variants)
+07-24 17:29:08.315 30920 22611 I amkush/hook_proxy:   ROB hooks: 1  (primary injection — returnOutputBuffers)
+07-24 17:29:08.315 30920 22611 I amkush/hook_proxy:   CS hooks:  2
+07-24 17:29:08.315 30920 22611 I amkush/hook_proxy:   setUsage hook:         OK (BUG-09 producer strip)
+07-24 17:29:08.315 30920 22611 I amkush/hook_proxy:   getEndpointUsage hook: OK (BUG-09 consumer strip)
+07-24 17:29:08.315 30920 22611 I amkush/hook_proxy:   Injection diagnostics will be logged every 200 calls
+07-24 17:29:08.315 30920 22611 I amkush/hook_proxy:   Watch 'ROB inject_attempts' — those confirm actual frame injection.
+07-24 17:29:08.315 30920 22611 I amkush/hook_proxy: ═════════════════════════════════════════════════════
+07-24 17:29:08.315 30920 22611 I amkush/main: [3/4] hook_proxy_install OK
+07-24 17:29:08.315 30920 22611 I amkush/main: [4/4] ipc_socket_start ...
+07-24 17:29:08.315 30920 22611 I amkush/main: [4/4] ipc_socket_start OK
+07-24 17:29:08.315 30920 22611 I amkush/main: === amkush virtual camera ACTIVE  via=ptrace ===
+07-24 17:29:08.327 30920 22618 I amkush/ipc_socket: Listening on abstract socket 'amkush_frame_fd'
+07-24 17:29:09.164 16044 16602 I ModuleManager: injectNow: SELinux restored to enforcing
+07-24 17:29:09.165 16044 16602 I ModuleManager: === injectNow rc=0 pid=30920 ===
+07-24 17:29:09.166 16044 16602 I ModuleManager: injector: I: ======== INJECTION ARGS ========
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: pid: 30920
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: package: 
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: sdk: 34
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: launch: 0
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: watch: 0
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: bp: 0
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: delay: 0us
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: timeout: 5000ms
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: memfd: 1
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: free: 0
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: hide: 0
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: lib[1]: /data/user/0/com.itsme.amkush/files/libhookProxy.so
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: ================================
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: Direct PID mode: targeting PID 30920
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: Attached to process successfully.
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: Initializing Injector...
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: Injector: dl defau
+07-24 17:29:09.166 16044 16602 I ModuleManager: injector: lt caller set to 0x700fa30000.
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: Injector Initialized.
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: Proccess current cmdline ("/system/bin/cameraserver").
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: ===== Injecting /data/user/0/com.itsme.amkush/files/libhookProxy.so...
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: Injector: using nativeInject...
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: nativeInject: memfd Name ("hIFFqnSpgdkE").
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: Injector: Library Handle (0x94560076407269ff).
+07-24 17:29:09.166 16044 16602 I ModuleManager: I: Injector: Library Base (0x6f62e20000).
+07-24 17:29:09.166 16044 16602 I ModuleManager: W: Injector: Couldn't find JNI_OnLoad s
+07-24 17:29:09.167 16044 16602 I ModuleManager: injector: ymbol.
+07-24 17:29:09.167 16044 16602 I ModuleManager: W: Injector: Couldn't find JavaVM.
+07-24 17:29:09.167 16044 16602 I ModuleManager: W: Injector: Skipping EntryPoint
+07-24 17:29:09.167 16044 16602 I ModuleManager: I: ===== Successfully injected /data/user/0/com.itsme.amkush/files/libhookProxy.so.
+07-24 17:29:09.167 16044 16602 I ModuleManager: I: Injected 1 lib successfully.
+07-24 17:29:09.167 16044 16602 I ModuleManager: I: Injection succeeded.
+07-24 17:29:09.167 16044 16602 I ModuleManager: I: Injection took 928.863077 MS.
+07-24 17:29:55.205 16044 16602 I ModuleManager: injectNow: hook_active_pid state file written (pid=30920)
+07-24 17:29:55.210 16044 16602 I ModuleManager: injectNow: app SELinux context='u:r:untrusted_app:s0:c51,c257,c512,c768��' domain='untrusted_app'
+07-24 17:29:55.824 16044 16602 I ModuleManager: injectNow: SELinux rule [untrusted_app] → magisk_ok
+07-24 17:29:55.824 16044 16602 I ModuleManager: su_ok
+07-24 17:29:55.824 16044 16602 I ModuleManager: ksu_ok
+07-24 17:29:56.971 16044 16602 I ModuleManager: injectNow: SELinux rule [untrusted_app_25] → magisk_ok
+07-24 17:29:56.971 16044 16602 I ModuleManager: su_ok
+07-24 17:29:56.971 16044 16602 I ModuleManager: ksu_ok
+07-24 17:29:58.193 16044 16602 I ModuleManager: injectNow: SELinux rule [untrusted_app_27] → magisk_ok
+07-24 17:29:58.193 16044 16602 I ModuleManager: su_ok
+07-24 17:29:58.193 16044 16602 I ModuleManager: ksu_ok
+07-24 17:29:59.114 16044 16602 I ModuleManager: injectNow: SELinux rule [platform_app] → magisk_ok
+07-24 17:29:59.114 16044 16602 I ModuleManager: su_ok
+07-24 17:29:59.114 16044 16602 I ModuleManager: ksu_ok
+07-24 17:30:00.662 16044 16602 I ModuleManager: injectNow: SELinux rule [priv_app] → magisk_ok
+07-24 17:30:00.662 16044 16602 I ModuleManager: su_ok
+07-24 17:30:00.662 16044 16602 I ModuleManager: ksu_ok
+07-24 17:30:01.587 16044 16602 I ModuleManager: injectNow: watchdog already running — skipping auto-start
+07-24 17:30:46.160  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:30:46.165  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:30:46.208  3958  4896 W ModuleManager: ModuleManager.loadModule():634 Module qtw is not available
+07-24 17:30:46.508  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:31:38.143 30920 22618 I amkush/ipc_socket: Client connected — receiving fd
+07-24 17:31:38.144 30920 22618 I amkush/frame_source: frame_source_init: 1280x720 stride=1280 fmt=0 slot_sz=1382400 total=4147264
+07-24 17:31:38.144 30920 22618 I amkush/ipc_socket: Frame source initialized from received fd=16
+07-24 17:31:52.768  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:31:52.790  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:31:52.904  3958  4896 W ModuleManager: ModuleManager.loadModule():634 Module qtw is not available
+07-24 17:31:53.201  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:31:53.487  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:31:53.556  3958  4896 W ModuleManager: ModuleManager.loadModule():634 Module qtw is not available
+07-24 17:31:53.974  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:31:57.754  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:31:58.482  3958  4896 W ModuleManager: ModuleManager.loadModule():634 Module qtw is not available
+07-24 17:32:21.318  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:32:21.323  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:32:21.343  3958  4896 W ModuleManager: ModuleManager.loadModule():634 Module qtw is not available
+07-24 17:32:25.763  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:32:25.931  3958  4896 W ModuleManager: ModuleManager.loadModule():634 Module qtw is not available
+07-24 17:32:25.934  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:32:34.393  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:32:34.551  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:32:34.661  3958  4896 W ModuleManager: ModuleManager.loadModule():634 Module qtw is not available
+07-24 17:32:36.609  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:32:36.870  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:32:37.049  3958  4896 W ModuleManager: ModuleManager.loadModule():634 Module qtw is not available
+07-24 17:32:38.536  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:32:38.725  3958  4896 W ModuleManager: ModuleManager.loadModule():634 Module qtw is not available
+07-24 17:32:38.833  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:32:43.447  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:32:43.451  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:32:43.695  3958  4896 W ModuleManager: ModuleManager.loadModule():634 Module qtw is not available
+07-24 17:33:19.775 30920 32248 I amkush/hook_proxy: CS[0] configureStreams HAL fired (fires=1)
+07-24 17:33:19.775 30920 32248 I amkush/hook_proxy: CS[0] HAL configureStreams: 1 stream(s) — logging originals:
+07-24 17:33:19.775 30920 32248 I amkush/hook_proxy: CS[0]  stream[0] fmt=0x23 640x480 usage=0x00000000
+07-24 17:33:19.775 30920 32248 I amkush/hook_proxy: CS[0] skipped 1 PROTECTED stream(s) (no usage mod)
+07-24 17:33:19.775 30920 32248 I amkush/hook_proxy: CS[0] pre-call: num_streams=1
+07-24 17:33:19.941 30920 32248 I amkush/hook_proxy: Camera3Stream::setUsage fires=1: 0x00020033 → 0x00020033 (SW_WRITE added; PROTECTED was absent)
+07-24 17:33:19.941 30920 32248 I amkush/hook_proxy: CS[0] original returned 0
+07-24 17:33:19.941 30920 32248 I amkush/hook_proxy: CS[0] stream map rebuilt: 1 stream(s)
+07-24 17:33:20.096 30920  8263 I amkush/hook_proxy: CS[0] configureStreams HAL fired (fires=2)
+07-24 17:33:20.096 30920  8263 I amkush/hook_proxy: CS[0] HAL configureStreams: 1 stream(s) — logging originals:
+07-24 17:33:20.096 30920  8263 I amkush/hook_proxy: CS[0]  stream[0] fmt=0x23 640x480 usage=0x00000033
+07-24 17:33:20.096 30920  8263 I amkush/hook_proxy: CS[0] pre-call: num_streams=1
+07-24 17:33:20.467 30920  8263 I amkush/hook_proxy: Camera3Stream::setUsage fires=2: 0x00020033 → 0x00020033 (SW_WRITE added; PROTECTED was absent)
+07-24 17:33:20.467 30920  8263 I amkush/hook_proxy: CS[0] original returned 0
+07-24 17:33:20.467 30920  8263 I amkush/hook_proxy: CS[0] stream map rebuilt: 1 stream(s)
+07-24 17:33:21.156 30920 30929 I amkush/hook_proxy: PCR[hook0] variant=3 fires=1 — diagnostics-only (HIDL/AIDL/OutputUtils not injectable; ROB hook is sole inject point)
+07-24 17:33:21.156 30920 30929 I amkush/hook_proxy: PCR[hook2] variant=2 fires=1 — diagnostics-only (HIDL/AIDL/OutputUtils not injectable; ROB hook is sole inject point)
+07-24 17:37:06.854  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:37:07.010  3958  4896 W ModuleManager: ModuleManager.loadModule():634 Module qtw is not available
+07-24 17:37:58.244  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:37:58.435  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:37:58.631  3958  4896 W ModuleManager: ModuleManager.loadModule():634 Module qtw is not available
+07-24 17:37:59.516  3958  4896 W ModuleManager: ModuleManager.loadModule():634 Module qtw is not available
+07-24 17:38:20.745  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:38:20.759  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:38:20.798  3958  4896 W ModuleManager: ModuleManager.loadModule():634 Module qtw is not available
+07-24 17:38:45.448  3958  3958 W ModuleManager: ModuleManager.loadModule():634 Module pwt is not available
+07-24 17:38:45.812  3958  4896 W ModuleManager: ModuleManager.loadModule():634 Module qtw is not available

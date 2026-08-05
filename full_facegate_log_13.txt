@@ -1,0 +1,110 @@
+============================================================
+FaceGate — FaceGate Log — Session Start
+============================================================
+Device      : Mi A1 (Xiaomi / Xiaomi)
+Android     : 13 (API 33)
+Security    : 2023-08-05
+Build ID    : TQ3A.230805.001
+Chipset     : Qualcomm (msm8953)
+Hardware    : qcom
+Board       : MSM8953
+============================================================
+
+--------- beginning of main
+08-15 05:29:56.060  7754  8063 I ModuleManager: injectNow: PID=787 verified has libcameraservice.so (4 mapping(s))
+08-15 05:29:56.166  7754  8063 I ModuleManager: injectNow: cameraserver pid=787 elfClass=2 is64=true
+08-15 05:29:56.166  7754  8063 I ModuleManager: injectNow: evicting lingering injector/watchdog before re-inject
+08-15 05:29:56.482  7754  8063 D ModuleManager: Watchdog stop requested
+08-15 05:29:57.088  7754  8063 I ModuleManager: injectNow: Fix2 — restarting cameraserver (pid=787)
+08-15 05:30:04.540  7754  8063 I ModuleManager: injectNow: cameraserver restarted, new pid=20258
+08-15 05:30:04.541  7754  8063 I ModuleManager: injectNow: effective inject pid=20258
+08-15 05:30:04.824  7754  8063 I ModuleManager: injectNow: disabling SELinux for injection window
+08-15 05:30:05.135  7754  8063 I ModuleManager: injectNow: deviceSdk=33 csIs64=true
+08-15 05:30:05.342  7754  8063 I ModuleManager: injectNow: SDK 33 ≥ 33, 64-bit — hookProxy copied to /data/local/tmp/libhookProxy64.so
+08-15 05:30:06.000  7754  8063 I ModuleManager: injectNow: SELinux restored to enforcing
+08-15 05:30:06.001  7754  8063 I ModuleManager: === injectNow rc=0 pid=787 ===
+08-15 05:30:06.002  7754  8063 I ModuleManager: injector: I: ======== INJECTION ARGS ========
+08-15 05:30:06.002  7754  8063 I ModuleManager: I: process: 20258
+08-15 05:30:06.002  7754  8063 I ModuleManager: I: sdk: 33
+08-15 05:30:06.002  7754  8063 I ModuleManager: I: launch: 0
+08-15 05:30:06.002  7754  8063 I ModuleManager: I: watch: 0
+08-15 05:30:06.002  7754  8063 I ModuleManager: I: bp: 0
+08-15 05:30:06.002  7754  8063 I ModuleManager: I: delay: 0us
+08-15 05:30:06.002  7754  8063 I ModuleManager: I: timeout: 5000ms
+08-15 05:30:06.002  7754  8063 I ModuleManager: I: memfd: 0
+08-15 05:30:06.002  7754  8063 I ModuleManager: I: free: 0
+08-15 05:30:06.002  7754  8063 I ModuleManager: I: hide: 0
+08-15 05:30:06.002  7754  8063 I ModuleManager: I: lib[1]: /data/local/tmp/libhookProxy64.so
+08-15 05:30:06.002  7754  8063 I ModuleManager: I: ================================
+08-15 05:30:06.002  7754  8063 I ModuleManager: I: Stopped target process threads successfully.
+08-15 05:30:06.002  7754  8063 I ModuleManager: I: Attached to target process successfully.
+08-15 05:30:06.002  7754  8063 I ModuleManager: I: Initializing Injector...
+08-15 05:30:06.002  7754  8063 I ModuleManager: I: Injector: dl default caller se
+08-15 05:30:06.003  7754  8063 I ModuleManager: injector: t to 0x7d3e624000.
+08-15 05:30:06.003  7754  8063 I ModuleManager: I: KittyRemoteSys: Using syscall gadget at 0x7d553022fc from 7d55302000-7d55303000 r-xp 0 00:00 0 [vdso]
+08-15 05:30:06.003  7754  8063 I ModuleManager: I: Injector Initialized.
+08-15 05:30:06.003  7754  8063 I ModuleManager: I: Injector: Proccess current cmdline ("/system/bin/cameraserver").
+08-15 05:30:06.003  7754  8063 I ModuleManager: I: ===== Injecting /data/local/tmp/libhookProxy64.so...
+08-15 05:30:06.003  7754  8063 I ModuleManager: I: Injected 0 libs successfully.
+08-15 05:30:06.003  7754  8063 I ModuleManager: I: Injection succeeded.E: callSyscall(172): Process didn't stop after syscall!
+08-15 05:30:06.003  7754  8063 I ModuleManager: E: callSyscall(
+08-15 05:30:06.003  7754  8063 I ModuleManager: injector: 172): PC(0x7d553022fc) | RET(0x0).
+08-15 05:30:06.003  7754  8063 I ModuleManager: E: callSyscall(172): SIG(Trap) | CODE(2) | ADDR(0x7d553022fc).
+08-15 05:30:06.003  7754  8063 I ModuleManager: E: callSyscall(172): MAP(<base>+0x2fc) 7d55302000-7d55303000 r-xp 0 00:00 0 [vdso]
+08-15 05:30:06.003  7754  8063 I ModuleManager: E: callSyscall(172): Failed.
+08-15 05:30:06.003  7754  8063 I ModuleManager: E: PTRACE_SETREGS failed for pid 20258. "No such process".
+08-15 05:30:06.003  7754  8063 I ModuleManager: E: PTRACE_SETREGS failed for pid 20258. "No such process".
+08-15 05:30:06.003  7754  8063 I ModuleManager: E: Injector: Failed to restore registers.
+08-15 05:30:06.003  7754  8063 I ModuleManager: E: Injector: Remote syscall te
+08-15 05:30:06.003  7754  8063 I ModuleManager: injector: st failed. errno("null").
+08-15 05:30:06.003  7754  8063 I ModuleManager: E: ===== Failed to inject /data/local/tmp/libhookProxy64.so!
+08-15 05:30:06.003  7754  8063 I ModuleManager: E: PTRACE_DETACH failed for pid 20258. "No such process".
+08-15 05:30:12.048  3360  3360 W ModuleManager: ModuleManager.loadModule():450 Module erj is not available
+08-05 23:30:37.341  7754  8063 I ModuleManager: injectNow: PID=21481 verified has libcameraservice.so (4 mapping(s))
+08-05 23:30:37.560  7754  8063 I ModuleManager: injectNow: cameraserver pid=21481 elfClass=2 is64=true
+08-05 23:30:37.561  7754  8063 I ModuleManager: injectNow: evicting lingering injector/watchdog before re-inject
+08-05 23:30:37.980  7754  8063 D ModuleManager: Watchdog stop requested
+08-05 23:30:38.612  7754  8063 I ModuleManager: injectNow: Fix2 — restarting cameraserver (pid=21481)
+08-05 23:31:01.243  7754  8063 I ModuleManager: injectNow: cameraserver restarted, new pid=28455
+08-05 23:31:01.243  7754  8063 I ModuleManager: injectNow: effective inject pid=28455
+08-05 23:31:01.875  7754  8063 I ModuleManager: injectNow: disabling SELinux for injection window
+08-05 23:31:02.314  7754  8063 I ModuleManager: injectNow: deviceSdk=33 csIs64=true
+08-05 23:31:02.826  7754  8063 I ModuleManager: injectNow: SDK 33 ≥ 33, 64-bit — hookProxy copied to /data/local/tmp/libhookProxy64.so
+08-05 23:31:03.965  7754  8063 I ModuleManager: injectNow: SELinux restored to enforcing
+08-05 23:31:03.966  7754  8063 I ModuleManager: === injectNow rc=0 pid=21481 ===
+08-05 23:31:03.966  7754  8063 I ModuleManager: injector: I: ======== INJECTION ARGS ========
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: process: 28455
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: sdk: 33
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: launch: 0
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: watch: 0
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: bp: 0
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: delay: 0us
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: timeout: 5000ms
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: memfd: 0
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: free: 0
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: hide: 0
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: lib[1]: /data/local/tmp/libhookProxy64.so
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: ================================
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: Stopped target process threads successfully.
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: Attached to target process successfully.
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: Initializing Injector...
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: Injector: dl default caller se
+08-05 23:31:03.966  7754  8063 I ModuleManager: injector: t to 0x745317a000.
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: KittyRemoteSys: Using syscall gadget at 0x74629a02fc from 74629a0000-74629a1000 r-xp 0 00:00 0 [vdso]
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: Injector Initialized.
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: Injector: Proccess current cmdline ("/system/bin/cameraserver").
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: ===== Injecting /data/local/tmp/libhookProxy64.so...
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: Injected 0 libs successfully.
+08-05 23:31:03.966  7754  8063 I ModuleManager: I: Injection succeeded.E: callSyscall(172): Process didn't stop after syscall!
+08-05 23:31:03.966  7754  8063 I ModuleManager: E: callSyscall(
+08-05 23:31:03.966  7754  8063 I ModuleManager: injector: 172): PC(0x74629a02fc) | RET(0x0).
+08-05 23:31:03.966  7754  8063 I ModuleManager: E: callSyscall(172): SIG(Trap) | CODE(2) | ADDR(0x74629a02fc).
+08-05 23:31:03.966  7754  8063 I ModuleManager: E: callSyscall(172): MAP(<base>+0x2fc) 74629a0000-74629a1000 r-xp 0 00:00 0 [vdso]
+08-05 23:31:03.966  7754  8063 I ModuleManager: E: callSyscall(172): Failed.
+08-05 23:31:03.966  7754  8063 I ModuleManager: E: PTRACE_SETREGS failed for pid 28455. "No such process".
+08-05 23:31:03.966  7754  8063 I ModuleManager: E: PTRACE_SETREGS failed for pid 28455. "No such process".
+08-05 23:31:03.966  7754  8063 I ModuleManager: E: Injector: Failed to restore registers.
+08-05 23:31:03.966  7754  8063 I ModuleManager: E: Injector: Remote syscall te
+08-05 23:31:03.966  7754  8063 I ModuleManager: injector: st failed. errno("null").
+08-05 23:31:03.966  7754  8063 I ModuleManager: E: ===== Failed to inject /data/local/tmp/libhookProxy64.so!
+08-05 23:31:03.966  7754  8063 I ModuleManager: E: PTRACE_DETACH failed for pid 28455. "No such process".

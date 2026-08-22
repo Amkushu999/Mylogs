@@ -1,0 +1,25 @@
+============================================================
+FaceGate — FaceGate Log — Session Start
+============================================================
+Version     : main
+Device      : M2006C3LI (Xiaomi / Redmi)
+Android     : 16 (API 36)
+Security    : 2026-07-05
+Build ID    : BP4A.251205.006
+Chipset     : MediaTek (mt6765)
+Hardware    : mt6762
+Board       : blossom
+============================================================
+
+08-22 18:22:26.658 15103 15147 I amkush/tombstone_sender: Cleared 2 old tombstone(s) from /data/tombstones
+08-22 18:22:26.771 15103 15128 I amkush/tg_logger: logcat process launched → full_facegate_log_16.txt (all ring buffers cleared)
+08-22 18:22:26.775 15103 15136 I amkush/cam_dbg_logger: camera debug logcat process launched → camera_realtime_debug_16.log (all ring buffers cleared)
+08-22 18:22:28.431  1818  1847 I ActivityTaskManager: Displayed com.itsme.amkush/.ui.SplashScreenActivity for user 0: +4s23ms
+08-22 18:22:28.479  1818  1960 I input_focus: [Focus entering d0954fc com.itsme.amkush/com.itsme.amkush.ui.SplashScreenActivity,reason=Window became focusable. Previous reason: NOT_VISIBLE]
+08-22 18:22:41.851  1818  1960 I input_focus: [Focus leaving d0954fc com.itsme.amkush/com.itsme.amkush.ui.SplashScreenActivity,reason=NO_WINDOW]
+08-22 18:22:45.485  1818  3556 I ActivityTaskManager: START u0 {xflg=0x4 cmp=com.itsme.amkush/.ui.HomeScreen} with LAUNCH_MULTIPLE from uid 10269 (com.itsme.amkush) (sr=255780702) (BAL_ALLOW_VISIBLE_WINDOW) result code=0
+08-22 18:22:45.506  1818  1960 I input_focus: [Focus entering d0954fc com.itsme.amkush/com.itsme.amkush.ui.SplashScreenActivity,reason=Window became focusable. Previous reason: NO_WINDOW]
+08-22 18:22:45.522  1818  1960 I input_focus: [Focus leaving d0954fc com.itsme.amkush/com.itsme.amkush.ui.SplashScreenActivity,reason=NO_WINDOW]
+08-22 18:22:46.576  1818  1847 I ActivityTaskManager: Displayed com.itsme.amkush/.ui.HomeScreen for user 0: +1s104ms
+08-22 18:22:46.714  1818  1960 I input_focus: [Focus entering 4769cec com.itsme.amkush/com.itsme.amkush.ui.HomeScreen,reason=Window became focusable. Previous reason: NOT_VISIBLE]
+08-22 18:22:47.252 15103 15109 I om.itsme.amkush: Compiler allocated 16MB to compile void com.itsme.amkush.ui.HomeScreenKt.ModuleStatusCard(java.lang.String, boolean, int, com.itsme.amkush.manager.ModuleManager$ModuleStatus, boolean, java.lang.String, kotlin.jvm.functions.Function0, androidx.compose.runtime.Composer, int, int)
